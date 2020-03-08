@@ -1,6 +1,6 @@
 # pluginSample Android插件化实现
 
-基于Android 8.0实现加载插件Activity
+基于Android 8.0实现加载启动插件Activity，暂时支持8.0，其它版本加载插件与hook过程有所有同，待完善。
 
 # 使用方法
 1.新建插件Moudle,build插件Apk，把插件Apk放入sdcard（实际开发中放在服务器此处为测试方便）待宿主加载。
