@@ -17,7 +17,6 @@ public class LoadPluginUtils {
             Class dexPathListClass = Class.forName("dalvik.system.DexPathList");
             Field dexElementsFiled = dexPathListClass.getDeclaredField("dexElements");
             dexElementsFiled.setAccessible(true);
-            //Object[] dexElementsObject = (Object[])dexElementsFiled.get(dexPathListClass);
 
             Class dexClassLoaderClass = Class.forName("dalvik.system.BaseDexClassLoader");
             Field dexPathListFiled  = dexClassLoaderClass.getDeclaredField("pathList");

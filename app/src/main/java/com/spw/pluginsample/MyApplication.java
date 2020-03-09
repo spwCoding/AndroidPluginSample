@@ -7,14 +7,25 @@ import com.spw.util.LoadPluginUtils;
 
 public class MyApplication extends Application {
 
+    static MyApplication application;
+
+    static boolean hasLoadPlugin;
+
     @Override
     public void onCreate() {
         super.onCreate();
-
-        LoadPluginUtils.loadPlugin(getApplicationContext());//加载插件apK
-
-        HookUtils.hookStartActivity(); //hook Activity启动流程
-
+        application = this;
     }
+
+
+    public static void loadPluginAndHook(){
+        if(hasLoadPlugin){
+            return;
+        }
+        LoadPluginUtils.loadPlugin(application);//加载插件apK
+        HookUtils.hookStartActivity(); //hook Activity启动流程
+        hasLoadPlugin = true;
+    }
+
 
 }

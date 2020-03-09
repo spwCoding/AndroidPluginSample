@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //测试插件类是否加载成功
         findViewById(R.id.load_plugin_class).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //启动过程把intnet中值改为启动宿主的 ProxyActivity
         findViewById(R.id.start_plugin_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
